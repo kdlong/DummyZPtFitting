@@ -1,0 +1,24 @@
+imax 1  number of channels
+jmax 1  number of backgrounds
+kmax 2 number of nuisance parameters (sources of systematical uncertainties)
+------------
+
+shapes DY * fitPtZlep1.root DY/ptl1_$CHANNEL  DY/ptl1_$CHANNEL_$SYSTEMATIC
+shapes bkgd * fitPtZlep1.root bkgd/ptl1_$CHANNEL  bkgd/ptl1_$CHANNEL_$SYSTEMATIC
+shapes data_obs * fitPtZlep1.root data_obs/ptl1_$CHANNEL  data_obs/ptl1_$CHANNEL_$SYSTEMATIC
+
+bin          mm
+observation  667866.0 
+
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second 'process' line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin                             mm              mm             
+process                         DY              bkgd
+process                         -1              1               
+rate                            647420.0        22100.303 
+------------                                                    
+lumi2016_13TeV          lnN     1.025           1.025           
+dummyErr                shape   1                -
