@@ -5,10 +5,10 @@ kmax 2 number of nuisance parameters (sources of systematical uncertainties)
 
 shapes DY * fitPtZlep1.root DY/ptl1_$CHANNEL  DY/ptl1_$CHANNEL_$SYSTEMATIC
 shapes bkgd * fitPtZlep1.root bkgd/ptl1_$CHANNEL  bkgd/ptl1_$CHANNEL_$SYSTEMATIC
-shapes data_obs * fitPtZlep1.root data_obs/ptl1_$CHANNEL  data_obs/ptl1_$CHANNEL_$SYSTEMATIC
+shapes data_obs * fitPtZlep1.root data_obs/ptl1_$CHANNEL 
 
 bin          mm
-observation  667866.0 
+observation  676516.0
 
 ------------
 # now we list the expected events for signal and all backgrounds in that bin
@@ -18,7 +18,7 @@ observation  667866.0
 bin                             mm              mm             
 process                         DY              bkgd
 process                         -1              1               
-rate                            647420.0        22100.303 
+rate                            656481.0        19217.7845
 ------------                                                    
 lumi2016_13TeV          lnN     1.025           1.025           
 dummyErr                shape   1                -
